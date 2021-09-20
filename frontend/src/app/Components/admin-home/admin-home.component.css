@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+   
+}
+/* Start of sidebar */
+.sidebar{
+    width: 240px;
+    position: fixed;
+   /* background-color:  rgba(41,21,14,0.9);*/
+   background-color:  #2b1b86;
+    height: 100%;
+    top:0;
+    left: 0;
+    /*padding:0.5em;*/
+    padding-top: 20px;
+    z-index: 1;
+    overflow-x: hidden;
+  
+    
+}
+.title-main {
+    width: 100vw;
+    display: grid;
+    
+}
+
+.title ul {
+    color: rgb(189, 211, 62);
+    display: flex;
+    list-style: none;
+    font-size: 50px;
+    font-weight: 500;
+    padding: 1.3rem;
+    padding-left: 2.8rem;
+    border-bottom: 1px solid rgb(189, 211, 62);
+
+}
+.title ul li{
+    text-transform: uppercase;
+    padding-left:0rem;
+    animation: light 2.0s linear infinite;
+    font-size:large;
+    text-shadow: rgb(94, 123, 179) 1px 0 2px; 
+    text-decoration: underline;
+}
+
+@keyframes light{
+    0%{
+        color:rgb(200, 220, 20);
+        text-shadow: none;
+    }
+    90%{
+        color:rgb(167, 220, 20);
+        text-shadow: none;
+    }
+    100%{
+        color:rgb(189, 211, 62);
+        text-shadow: 0 0 0.8rem rgb(189, 211, 62);
+    }
+
+}
+.title ul li:nth-child(1){animation-delay: 0s;}
+.title ul li:nth-child(2){animation-delay: 0.2s;}
+.title ul li:nth-child(3){animation-delay: 0.4s;}
+.title ul li:nth-child(4){animation-delay: 0.6s;}
+
+
+.sidebar-links li{
+    color: rgb(189, 211, 62);
+    list-style: none;
+    padding: 1.5rem;
+  
+    border-bottom: 1px solid rgba(245, 245,245,0.4);
+}
+
+.sidebar-links a{
+    color: rgb(213, 214, 205);
+}
+
+h6{
+    color:rgb(229, 233, 207);
+    padding: 20px
+}
+.sidebar-links .dropdown-toggle {
+    color: #cecbe0;
+    
+}
+
+.collapse li{
+    border-bottom : 1px solid #bec1d6;
+    padding-left: 1.2rem;
+    
+}
+.collapse li:last-child{
+    border-bottom : none
+    
+}
+.collapse a{
+    color: white;
+    
+}
+a:hover{
+    opacity: 0.5;
+}
+
+/*End of styling sidebar*/
+
+
+
+
+/* styling content for router-outlet */
+.content{
+  position: relative;
+    left:240px;
+    min-height: 100vh;
+}
+
+
+
+
+/*Styling For responsiveness*/
+@media only screen and (max-width: 768px){
+    .sidebar{
+       
+        width:110px;
+        padding:0em;
+        z-index:999;
+    }
+  
+    .content{
+       
+        left:110px;
+        
+    }
+    .sidebar-links li{
+        padding-left: 0.8rem;
+    }
+    .sidebar h3{
+  
+        color: rgb(103, 16, 114);
+        padding :15px;
+        padding-left: 10px;
+        
+        border-bottom: 1px solid rgb(208, 67, 226);
+        
+    }
+    .collapse {
+        font-size: 12px;
+        
+    }
+
+    .title ul{
+       
+        padding-left: 1rem;
+        font-size: xx-large;
+    }
+    .title ul li{
+        padding-left: 0.2rem;
+    }
+ 
+}
+@media screen and (max-device-width: 481px) { 
+
+    .sidebar{
+       
+        width:80px;
+        padding:0.01em;
+        z-index:999;
+    }
+  
+    .content{
+    left:80px
+        
+    }
+    .sidebar-links li{
+        padding-left: 0.1rem;
+        font-size: 1.15rem;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .sidebar h3{
+  
+        color: rgb(114, 15, 128);
+        padding :15px;
+        padding-left: 10px;
+        
+        border-bottom: 1px solid rgb(21, 145, 150);
+        
+    }
+    .title ul{
+      
+        padding-left: 0.5rem;
+        font-size: x-large;
+
+    }
+    .collapse {
+        font-size: 10px;
+
+    }
+     
+    .collapse li{
+        padding-left: 0.1rem;
+    }
+}

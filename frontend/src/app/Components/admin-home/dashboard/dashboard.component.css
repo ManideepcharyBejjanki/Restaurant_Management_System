@@ -1,0 +1,126 @@
+/*wrapper for whole component*/
+.wrapper{
+    
+    width:84.3vw;
+    overflow: hidden;
+    
+    height:100vh;
+    color: rgb(74, 104, 187);
+  
+   
+}
+
+/*styling for  whole content*/
+.content{
+    padding-top: 16rem;
+    background-color: rgb(194, 39, 160);
+    padding-bottom:21rem;
+
+}
+
+.upper-svg{
+    background-color: rgb(194, 39, 160);
+}
+
+/*styling of left include matter and heading*/
+.left{
+    float:left;
+    text-align: center;
+    padding-left:4rem;
+    margin-top:3rem;
+}
+
+/*styling of right include image*/
+.right{
+ margin-right: 10rem;;
+    float: right;
+}
+
+/*Styling of title*/
+.heading{
+    color: #b2ced3;
+    font-family: Julius Sans One;
+    animation: light 2.0s linear infinite;
+    font-weight:  bolder;
+    margin-left: 10rem;
+    text-shadow: rgb(94, 123, 179) 1px 0 2px; 
+    text-decoration: underline;
+    text-decoration-color:rgb(187, 20, 220);
+}
+p{
+    color:rgb(200, 126, 243);
+    margin-left: 10rem;
+}
+img{
+    width:55rem;
+    height: 35rem;
+    margin-top: -8rem;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+    border-radius: 50%;
+    border-top:10px solid rgb(202, 245, 49);
+
+    border-right:rgb(71, 5, 102);
+   
+
+}
+img:hover{
+    border-top:none;
+    width:50rem;
+    box-shadow: 2px 2px 0px 2px rgb(69, 116, 202);
+}
+/*Styling of content ends*/ 
+
+
+/*making it resonsive*/
+@media only screen and (max-width: 600px) {
+  .right{
+    margin-right: 0;;
+    float: none;
+    
+  }
+  .left{
+    float:none;
+    text-align: center;
+    padding-left:0;
+    margin-top:0;
+      
+      
+     
+  }
+  .content{
+    padding-top: 0;
+    background-color: rgb(180, 20, 220);
+    padding-bottom:0;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.heading{
+    width:240px;
+    margin-left: 0;
+  text-align: center;
+}
+p{
+    width: 240px;
+    margin-left: 0;
+    text-align: center;
+}
+
+img{
+  width:215px;
+  height:190px;
+    margin-top: 0;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+    border-radius: 50%;
+    border-top:7px solid rgb(101, 94, 190);
+    border-right:rgb(107, 3, 81);
+
+}
+img:hover{
+    
+    box-shadow: 2px 2px 0px 2px rgb(144, 90, 205);
+}
+  }
